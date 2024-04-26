@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="firstNumber" placeholder="Enter the number" value="">
+    </div><br>
+    <div>
+        <input type="text" id="secondNumber" placeholder="Enter the number" value="">
+    </div> 
+
+    <p>Total is:</p>
+    <p id="numberTotal"></p>
+
+    <script>
+        var firstNumber = document.getElementById("firstNumber");
+        var secondNumber = document.getElementById("secondNumber");
+
+        
+        var numberTotal = document.getElementById("numberTotal")
+        numberTotal = firstNumber.value +  secondNumber.value;
+
+    </script>
+</body>
+</html>

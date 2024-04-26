@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+    </head>
+
+    <body>
+       
+        <main>
+           <div class="container mt-5">
+            <form>
+                <div class="mb-3">
+                  <label for="">Number 1</label>
+                  <input type="text" id="numberOne" value="">
+                </div>
+                <div class="mb-3">
+                    <label for="">Number 1</label>
+                    <input type="text" id="numberTwo" value="">
+                </div>
+                <button type="submit" class="btn btn-secondary" id="addBtn">Add</button>
+                <button type="submit" class="btn btn-secondary" id="subtractBtn">Subtract</button>
+                <button type="submit" class="btn btn-secondary" id="multiplyBtn">Multply</button>
+                <button type="submit" class="btn btn-secondary" id="divideBtn">Divide</button>
+                
+                <div class="mt-3">
+                    <label for="">Answer</label>
+                    <input type="text" id="answerInput">
+                </div>
+              </form>
+
+           </div>
+        </main>
+        <script>
+
+            
+            function init() {
+                const addBtn = document.getElementById("addBtn");
+                const subtractBtn = document.getElementById("subtractBtn");
+                const multiplyBtn = document.getElementById("multiplyBtn");
+                const divideBtn = document.getElementById("divideBtn");
+
+                addBtn.onclick = addCalculation;
+
+            } 
+
+            window.onload = init;
+
+            function addCalculation() {
+                const numberOne = document.getElementById("numberOne");
+                const numberTwo = document.getElementById("numberTwo");
+
+                let result = Number(numberOne.value) + Number(numberTwo.value);
+
+                let answerInput = document.getElementById("answerInput");
+
+                answerInput.value = result;
+                
+
+            
+            }
+
+
+
+
+        </script>
+
+
+
+        <!-- <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script> -->
+    </body>
+</html>
